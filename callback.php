@@ -23,7 +23,7 @@ $_SESSION['refreshToken'] = $refreshToken;
 
 //$api->setAccessToken($_SESSION['accessToken']);
 
-//$_SESSION['user'] = $api->me()->display_name; //set session username
+$_SESSION['user'] = "temp";//$api->me()->display_name; //set session username
 
 
 
