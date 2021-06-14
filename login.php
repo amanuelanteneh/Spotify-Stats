@@ -1,5 +1,9 @@
 <?php 
   session_start(); //start session
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  header('Location: auth.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -58,13 +62,6 @@
       <input type="submit" value="Sign in with Spotify" class="btn"/> <br/><br/> 
     </form>
 </div>
-
-<?php 
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  header('Location: auth.php');
-}
-?>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

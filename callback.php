@@ -5,7 +5,7 @@ session_start();
 $session = new SpotifyWebAPI\Session(
     '0ec8ef8e321a49429a39d4bc87ca2188',
     'a030de15311a4109a06a2fbc92d89adc',
-    'https://spotify-stats-php.herokuapp.com/callback.php'
+    'http://localhost/'
 );
 
 // Request a access token using the code from Spotify
