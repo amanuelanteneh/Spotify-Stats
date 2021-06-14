@@ -8,7 +8,7 @@ $session = new SpotifyWebAPI\Session(
     'https://spotify-stats-php.herokuapp.com/callback.php'
 );
 
-$state = $session->generateState();
+
 $options = [
     'scope' => [
         'playlist-read-private',
