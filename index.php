@@ -53,7 +53,8 @@
     $myTopArtistsLong = $api->getMyTop('artists', $optionsLong);
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-        header("Location: logout.php");      
+      echo $e;  
+      //header("Location: logout.php");      
     } 
 ?>
 
