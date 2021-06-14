@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+    }
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(to top left, rgb(196, 196, 196), #242424);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    }
+
+.name {
+    color: #37FD56;
+    font-size: 1.4rem;
+    padding-right: 1rem;
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#inputContainer {
+    padding-top: 3rem;
+    width: 45%;
+}
+
+.btn {
+  margin-top: 2rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Loading css */
+p {
+    border-right: solid 5px rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6vmin;
+    color: rgba(255,255,255,.70);
+    text-align: center;
+  }
+
+
+/* Animation */
+p {
+    animation: animated-text 3s linear 1s 1 normal both,
+               animated-cursor 600ms linear infinite;
+  }
+
+  /* text animation */
+  
+@keyframes animated-text{
+    from{width: 0%;}
+    to{width: 100%;}
+  }
+  
+  /* cursor animations */
+  
+@keyframes animated-cursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+@media only screen and (max-width: 940px) {
+
+
+    #inputContainer {
+    padding-top: 3rem;
+    width: 85%;
+    }
+
+    @keyframes animated-text{
+        from{width: 0%;}
+        to{width: 100%;}
+      }
+
+}

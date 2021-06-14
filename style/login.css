@@ -1,0 +1,116 @@
+html {
+    height: 100%;
+    }
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(to top left, rgb(196, 196, 196), #242424);
+    color: black;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    }
+
+.container {
+  margin-top: 40px;
+  border-radius: 4px;
+  border: solid white 1px;
+  box-shadow: 0 2px 80px 0 rgba(0,0,0,3);
+}
+
+.name {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.name:hover {
+  color: #10be2a;
+}
+
+span {
+  color: white;
+  font-size: 4vmin;
+}
+
+h2 {
+  color: white;
+  font-size: 8vmin; 
+}
+
+.btn {
+  border-radius: 40px;
+  
+}
+
+.btn:hover {
+  background-color: #10be2a;
+  color: white;
+}
+
+li {
+  padding-left: 0.5rem;
+}
+
+p {
+    border-right: solid 5px rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6vmin;
+    color: white;
+    text-align: left;
+  }
+
+
+/* Animation */
+p {
+    animation: animated-text 2s linear 1s 1 normal both,
+               animated-cursor 600ms linear infinite;
+  }
+
+  /* text animation */
+  
+@keyframes animated-text{
+    from{width: 0%;}
+    to{width: 85%;}
+  }
+  
+  /* cursor animations */
+  
+@keyframes animated-cursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+
+@media only screen and (max-width: 768px) {
+
+p {
+    border-right: solid 5px rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vmin;
+    color: rgba(255,255,255,.70);
+    text-align: left;
+  }
+
+  @keyframes animated-text{
+    from{width: 0%;}
+    to{width: 100%;}
+  }
+
+h2 {
+  font-size: 6vmin;
+}
+
+.container {
+  width: 90%;
+}
+
+span {
+  font-size: 4.5vmin;
+}
+
+}

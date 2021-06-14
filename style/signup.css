@@ -1,0 +1,69 @@
+html {
+    height: 100%;
+    }
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #12cf2e, #fff);
+    color: black;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+
+    }
+.form-control {
+    width: 50%;
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+p {
+    border-right: solid 5px rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6vmin;
+    color: rgba(255,255,255,.70);
+    text-align: left;
+  }
+
+
+/* Animation */
+p {
+    animation: animated-text 2s linear 1s 1 normal both,
+               animated-cursor 600ms linear infinite;
+  }
+
+  /* text animation */
+  
+@keyframes animated-text{
+    from{width: 0%;}
+    to{width: 85%;}
+  }
+  
+  /* cursor animations */
+  
+@keyframes animated-cursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+
+@media only screen and (max-width: 768px) {
+.form-control {
+    width: 100%;
+}
+
+p {
+    border-right: solid 5px rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vmin;
+    color: rgba(255,255,255,.70);
+    text-align: left;
+  }
+}
