@@ -41,7 +41,6 @@ body {
     border: 3px solid #37FD56;
 }
 
-
 #mainArtist {
    width: 45%;
    height: 45%;
@@ -135,7 +134,7 @@ p {
    width: 65%;
    height: 65%;
    border-radius: 10px;
-   border: 3px solid black;
+   border: 5px solid #37FD56;
    box-shadow: 0 1px 10px 0 rgba(0,0,0,3)
 
 }
