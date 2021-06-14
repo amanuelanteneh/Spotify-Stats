@@ -1,5 +1,3 @@
-window.onload = function() { //wait for php to finish echoing html divs
-
 var topShortTerm = document.getElementById("top-music-short"); 
 var topMediumTerm = document.getElementById("top-music-medium"); 
 var topLongTerm = document.getElementById("top-music-long"); 
@@ -56,4 +54,3 @@ weeks.addEventListener("click", () => {
     topMediumTerm.style.display = "none";
     topLongTerm.style.display = "none";
 });
-}
