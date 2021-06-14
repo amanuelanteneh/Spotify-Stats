@@ -16,8 +16,7 @@ $options = [
         'user-top-read',
         'user-read-recently-played',
         'playlist-modify-public',
-    ],
-    'state' => $state,
+    ]
 ];
 
 header('Location: ' . $session->getAuthorizeUrl($options));
