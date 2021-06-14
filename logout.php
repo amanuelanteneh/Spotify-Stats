@@ -105,7 +105,7 @@ if (count($_COOKIE) > 0) {
   
   }
 
-  header("Refresh:5; url=login.php");  
+  header("Refresh:3; url=login.php");  
 
 ?>
 </body>
