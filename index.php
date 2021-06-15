@@ -26,6 +26,7 @@
   try {    
     $api = new SpotifyWebAPI\SpotifyWebAPI();
 
+    
     $api->setAccessToken($_SESSION['accessToken']);
   
     $myRecentSongs = $api->getMyRecentTracks();

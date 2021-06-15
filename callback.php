@@ -19,9 +19,11 @@ $refreshToken = $session->getRefreshToken();
 $_SESSION['accessToken'] = $accessToken; //saving access and refresh tokens in session array
 $_SESSION['refreshToken'] = $refreshToken;
 
-//$api = new SpotifyWebAPI\SpotifyWebAPI();
+$session->refreshAccessToken($refreshToken);
 
-//$api->setAccessToken($_SESSION['accessToken']);
+$api = new SpotifyWebAPI\SpotifyWebAPI();
+
+$api->setAccessToken($_SESSION['accessToken']);
 
 $_SESSION['user'] = "temp";//$api->me()->display_name; //set session username
 
