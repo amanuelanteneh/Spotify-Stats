@@ -1,6 +1,6 @@
 <?php 
   session_start(); //start session
-
+  require_once("spotify-api.php");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   header('Location: auth.php');
 }

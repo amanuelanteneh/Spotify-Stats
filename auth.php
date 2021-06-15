@@ -1,5 +1,5 @@
 <?php
-//using PHP Spotify API library to make OAuth authorization easier
+/* //using PHP Spotify API library to make OAuth authorization easier
 require 'vendor/autoload.php';
 
 $session = new SpotifyWebAPI\Session(
@@ -21,6 +21,32 @@ $options = [
 
 header('Location: ' . $session->getAuthorizeUrl($options));
 
-die();
+die();*/
+
+require_once("spotify-api.php");
+
+if (!isset($_SESSION['spotify_auth'])) {
+    if (!isset($_GET['code'])) {
+        $options = [
+            'scope' => [
+                'playlist-read-private',
+                'user-read-private',
+                'user-top-read',
+                'user-read-recently-played',
+                'playlist-modify-public',
+            ]
+        ];
+        header('Location: ' . $session->getAuthorizeUrl($options));
+    }
+    else {
+        $session->requestAccessToken($_GET['code']);
+        $accessToken = $session->getAccessToken();
+   //     setcookie("spot_auth", $accessToken, time() + (86400 * 30), "/");
+        $_SESSION['spotify_auth'] = $accessToken;
+        header("Location: index.php");
+    }
+} else {
+    header("Location: index.php");
+}
 
 ?>

@@ -24,10 +24,9 @@
   }
   else {
   try {    
-    $api = new SpotifyWebAPI\SpotifyWebAPI();
+   // $api = new SpotifyWebAPI\SpotifyWebAPI();
 
-
-    $api->setAccessToken($_SESSION['accessToken']);
+//    $api->setAccessToken($_SESSION['accessToken']);
   
     $myRecentSongs = $api->getMyRecentTracks();
     $albumCover1 = $myRecentSongs->items[0]->track->album->images[0]->url;
@@ -53,7 +52,7 @@
     $myTopArtistsLong = $api->getMyTop('artists', $optionsLong);
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-      echo $e;  
+      echo   
       //header("Location: logout.php");      
     } 
 ?>
