@@ -24,8 +24,60 @@
       header("Location: login.php");
   }
   else {
-  $successMsg = "";
-  if (isset($_GET['playlistName']) && $_GET['playlistName'] != "") {
+
+?>
+    <header>
+    <!--Navbar (bootstrap)-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: black !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.9); !important;">
+      <div class="name"><img src="img/spot.png" width="40" height="40">  Spotify Stats</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link disabled" style="color: white;">Welcome, <?php echo $_SESSION['user'] ?>!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="top.php">Top Music</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="playlist.php">Playlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+    <div class="container text-center d-flex justify-content-center" id="inputContainer">
+        <form id="inputForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="get">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Enter Name For Playlist</label>
+                <input type="text" class="form-control" id="playlistNameInput" placeholder="Playlist Name" name="playlistName">
+            </div>
+            <div class="form-group"> <!-- Dropdown for interval option -->
+                <label for="timeIntervalSelector">Create Playlist Based On Music From:</label>
+                <select class="form-control" id="timeIntervalSelect" name="timeFrame">
+                    <option>Last 4 weeks</option>
+                    <option>Last 6 months</option>
+                    <option>Last 2 years</option>
+                </select>
+                <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Create
+                Playlist</button>
+            </div>
+            <div><p><?php echo $successMsg ?></p></div>
+        </form>
+    </div>
+
+<?php
+ if (isset($_GET['playlistName']) && $_GET['playlistName'] != "") { //place php here so error messages dont get echoed to top top of html doc
    
    $playlistName = $_GET['playlistName'];
    $timeFrame = $_GET['timeFrame'];
@@ -124,58 +176,8 @@
 }  
 else if (isset($_GET['playlistName']) && $_GET['playlistName'] == "") {
     echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>Please Enter a Playlist Name.</b></span>";
-}
 
 ?>
-    <header>
-    <!--Navbar (bootstrap)-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: black !important; box-shadow: 0 2px 4px 0 rgba(0,0,0,.9); !important;">
-      <div class="name"><img src="img/spot.png" width="40" height="40">  Spotify Stats</div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link disabled" style="color: white;">Welcome, <?php echo $_SESSION['user'] ?>!</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="top.php">Top Music</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="playlist.php">Playlist</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.php">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-  </header>
-    <div class="container text-center d-flex justify-content-center" id="inputContainer">
-        <form id="inputForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="get">
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Enter Name For Playlist</label>
-                <input type="text" class="form-control" id="playlistNameInput" placeholder="Playlist Name" name="playlistName">
-            </div>
-            <div class="form-group"> <!-- Dropdown for interval option -->
-                <label for="timeIntervalSelector">Create Playlist Based On Music From:</label>
-                <select class="form-control" id="timeIntervalSelect" name="timeFrame">
-                    <option>Last 4 weeks</option>
-                    <option>Last 6 months</option>
-                    <option>Last 2 years</option>
-                </select>
-                <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Create
-                Playlist</button>
-            </div>
-            <div><p><?php echo $successMsg ?></p></div>
-        </form>
-    </div>
 
 <?php } ?>
 
