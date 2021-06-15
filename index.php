@@ -32,25 +32,7 @@
     $myRecentSongs = $api->getMyRecentTracks();
     $albumCover1 = $myRecentSongs->items[0]->track->album->images[0]->url;
     $albumCover2 = $myRecentSongs->items[1]->track->album->images[0]->url;
-    $albumCover3 = $myRecentSongs->items[2]->track->album->images[0]->url;
-
-    $optionsShort = $options = [
-    'limit' => 10,
-    'time_range' => "short_term",];
-    $optionsMedium = $options = [
-    'limit' => 10,
-    'time_range' => "medium_term",];
-    $optionsLong = $options = [
-    'limit' => 10,
-    'time_range' => "long_term",];
-    //username, time frame, artist img, artist id - for artist table
-    //username, time frame, album img, track id
-    $myTopSongsShort = $api->getMyTop('tracks', $optionsShort);
-    $myTopArtistsShort = $api->getMyTop('artists', $optionsShort);
-    $myTopSongsMedium = $api->getMyTop('tracks', $optionsMedium);
-    $myTopArtistsMedium = $api->getMyTop('artists', $optionsMedium);
-    $myTopSongsLong = $api->getMyTop('tracks', $optionsLong);
-    $myTopArtistsLong = $api->getMyTop('artists', $optionsLong);
+    $albumCover3 = $myRecentSongs->items[2]->track->album->images[0]->url; 
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
       header("Location: logout.php");      
