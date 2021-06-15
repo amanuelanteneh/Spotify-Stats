@@ -23,17 +23,14 @@ body {
   font-size: 1.5rem;
 }
 
-.name:hover {
-  color: #10be2a;
-}
 
 span {
-  color: white;
-  font-size: 4vmin;
+  color: #37FD56;
+  font-size: 3.5vmin;
 }
 
 h2 {
-  color: white;
+  color: ;
   font-size: 8vmin; 
 }
 

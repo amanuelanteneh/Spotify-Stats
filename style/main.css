@@ -41,6 +41,7 @@ body {
     visibility: hidden;
     color: white;
     font-size: 4vmin;
+    padding-top: 1.5rem;
 }
 
 h1 {
