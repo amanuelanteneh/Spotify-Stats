@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 $session = new SpotifyWebAPI\Session(
     '0ec8ef8e321a49429a39d4bc87ca2188',
     'a030de15311a4109a06a2fbc92d89adc',
-    'https://spotify-stats-php.herokuapp.com/index.php'
+    'https://spotify-stats-php.herokuapp.com/callback.php'
 );
 
 // Request a access token using the code from Spotify
@@ -30,8 +30,9 @@ $api->setAccessToken(urlencode($_COOKIE['accessToken']));
 
 
 setcookie("user", $api->me()->display_name, time() + (86400 * 10));
-header('Location: https://spotify-stats-php.herokuapp.com/index.php');
 
+header('Location: https://spotify-stats-php.herokuapp.com/index.php');
+die();
 }
 catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
     echo $e;
@@ -40,6 +41,6 @@ catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
 
 
 // Send the user to main page 
-die();
+
 
 ?>
