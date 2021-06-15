@@ -20,7 +20,7 @@
   
   session_start();
   if (!isset($_SESSION['user'])) {
-      header("Location: login.php");
+      header("Location: https://spotify-stats-php.herokuapp.com/login.php");
   }
   else {
 

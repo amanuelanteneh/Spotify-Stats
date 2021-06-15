@@ -20,7 +20,7 @@
 
   session_start();
   if (!isset($_SESSION['user'])) {
-      header("Location: login.php");
+      header("Location: https://spotify-stats-php.herokuapp.com/login.php");
   }
   else {
   try {    
@@ -53,8 +53,7 @@
     $myTopArtistsLong = $api->getMyTop('artists', $optionsLong);
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-      echo  $e;
-      //header("Location: logout.php");      
+      header("Location: logout.php");      
     } 
 ?>
 

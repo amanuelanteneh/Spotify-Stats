@@ -26,12 +26,11 @@ try {
 
     $_SESSION['user'] = $api->me()->display_name;
 
-    header('Location: https://spotify-stats-php.herokuapp.com/index.php');
+    header('Location: https://spotify-stats-php.herokuapp.com/callback.php');
     die();
 }
 catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-    //header('Location: https://spotify-stats-php.herokuapp.com/login.php');
-    echo $e;
+    header('Location: https://spotify-stats-php.herokuapp.com/login.php');
 }
 
 ?>
