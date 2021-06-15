@@ -32,6 +32,7 @@ body {
 
 .selectedBorder {
     z-index: 10;
+    width: 33%;
     border: #37FD56;
 }
 
