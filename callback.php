@@ -23,13 +23,17 @@ setcookie('accessToken', $accessToken, time() + (86400 * 30));
 setcookie('refreshToken', $refreshToken, time() + (86400 * 30));
 
 //$session->refreshAccessToken($refreshToken);
-
+try {
 $api = new SpotifyWebAPI\SpotifyWebAPI();
 
-$api->setAccessToken($_COOKIE['accessToken']);
+$api->setAccessToken(urlencode($_COOKIE['accessToken']));
 
 
 setcookie("user", $api->me()->display_name, time() + (86400 * 10));
+}
+catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
+    echo $e;
+}
 //$_COOKIE['user'] = "temp";// //set session username
 
 
