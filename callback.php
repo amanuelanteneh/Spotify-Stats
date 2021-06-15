@@ -19,8 +19,8 @@ $refreshToken = $session->getRefreshToken();
 //$_COOKIE['accessToken'] = $accessToken; //saving access and refresh tokens in session array
 //$_COOKIE['refreshToken'] = $refreshToken;
 
-setcookie("accessToken", $accessToken, time() + (86400 * 30));
-setcookie("refreshToken", $refreshToken, time() + (86400 * 30));
+setcookie('accessToken', $accessToken, time() + (86400 * 30));
+setcookie('refreshToken', $refreshToken, time() + (86400 * 30));
 
 //$session->refreshAccessToken($refreshToken);
 
