@@ -30,6 +30,8 @@ $api->setAccessToken(urlencode($_COOKIE['accessToken']));
 
 
 setcookie("user", $api->me()->display_name, time() + (86400 * 10));
+header('Location: https://spotify-stats-php.herokuapp.com/index.php');
+
 }
 catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
     echo $e;
@@ -38,7 +40,6 @@ catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
 
 
 // Send the user to main page 
-header('Location: https://spotify-stats-php.herokuapp.com/index.php');
 die();
 
 ?>
