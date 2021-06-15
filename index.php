@@ -87,7 +87,9 @@
         <!--first item to be shown-->
         <div class="d-flex justify-content-center">
           <img src=<?php echo $albumCover1 ?> class="d-block" alt="" id="song1">
-          <span class="songName" id="songName1"> <?php echo $song1 ?> </span>
+        </div>
+        <div class="d-flex justify-content-center">
+           <span class="songName" id="songName1"> <?php echo $song1 ?> </span>
         </div>
         <div class="carousel-caption">
           <h1>Top Music</h1>
@@ -98,7 +100,9 @@
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
           <img src=<?php echo $albumCover2 ?> class="d-block" alt="" id="song2">
-          <span class="songName" id="songName2"> <?php echo $song2 ?> </span>
+        </div>
+        <div class="d-flex justify-content-center">
+           <span class="songName" id="songName2"> <?php echo $song2 ?> </span>
         </div>
         <div class="carousel-caption">
           <h1>Related Music</h1>
@@ -108,7 +112,9 @@
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
           <img src=<?php echo $albumCover3 ?> class="d-block" alt="" id="song3">
-          <span class="songName" id="songName3"> <?php echo $song3 ?> </span>
+        </div>
+        <div class="d-flex justify-content-center">
+           <span class="songName" id="songName3"> <?php echo $song3 ?> </span>
         </div>
         <div class="carousel-caption">
           <h1>Make a Playlist</h1>

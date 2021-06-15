@@ -39,7 +39,8 @@ body {
 
 .songName {
     visibility: hidden;
-    color: #37FD56;
+    color: white;
+    font-size: 4vmin;
 }
 
 h1 {
