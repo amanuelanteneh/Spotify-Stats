@@ -18,8 +18,8 @@
 <body>
 <?php
 
-  //session_start();
-  if (!isset($_COOKIE['user'])) {
+  session_start();
+  if (!isset($_SESSION['user'])) {
       header("Location: login.php");
   }
   else {
@@ -27,7 +27,7 @@
     $api = new SpotifyWebAPI\SpotifyWebAPI();
 
 
-    $api->setAccessToken($_COOKIE['accessToken']);
+    $api->setAccessToken($_SESSION['accessToken']);
   
     $myRecentSongs = $api->getMyRecentTracks();
     $albumCover1 = $myRecentSongs->items[0]->track->album->images[0]->url;
@@ -69,7 +69,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link disabled" style="color: white;">Welcome, <?php echo $_COOKIE['user'] ?>!</a>
+            <a class="nav-link disabled" style="color: white;">Welcome, <?php echo "<br>" . $_SESSION['user'] ?>!</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php">Home</a>

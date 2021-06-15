@@ -1,6 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-//session_start();
+session_start();
 
 $session = new SpotifyWebAPI\Session(
     '0ec8ef8e321a49429a39d4bc87ca2188',
@@ -12,35 +12,25 @@ $session = new SpotifyWebAPI\Session(
 
 $session->requestAccessToken($_GET['code']);
 
-
 $accessToken = $session->getAccessToken();
 $refreshToken = $session->getRefreshToken();
 
-//$_COOKIE['accessToken'] = $accessToken; //saving access and refresh tokens in session array
-//$_COOKIE['refreshToken'] = $refreshToken;
+$_SESSION['accessToken'] = $accessToken; //saving access and refresh tokens in session array
+$_SESSION['refreshToken'] = $refreshToken;
 
-setcookie('accessToken', $accessToken, time() + (86400 * 30));
-setcookie('refreshToken', $refreshToken, time() + (86400 * 30));
 
-//$session->refreshAccessToken($refreshToken);
 try {
-$api = new SpotifyWebAPI\SpotifyWebAPI();
+    $api = new SpotifyWebAPI\SpotifyWebAPI();
+   
+    $api->setAccessToken($_COOKIE['accessToken']);
 
-$api->setAccessToken(urlencode($_COOKIE['accessToken']));
+    $_SESSION['user'] = $api->me()->display_name;
 
-
-setcookie("user", $api->me()->display_name, time() + (86400 * 10));
-
-header('Location: https://spotify-stats-php.herokuapp.com/index.php');
-die();
+    header('Location: https://spotify-stats-php.herokuapp.com/index.php');
+    die();
 }
 catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-    echo $e;
+    header('Location: https://spotify-stats-php.herokuapp.com/login.php');
 }
-//$_COOKIE['user'] = "temp";// //set session username
-
-
-// Send the user to main page 
-
 
 ?>
