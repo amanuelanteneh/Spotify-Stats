@@ -1,1 +1,1 @@
-# Spotify-Stats Repo Readme
+# Spotify Stats ![](img/spotSmall.png)
