@@ -3,8 +3,8 @@
 require 'vendor/autoload.php';
 
 $session = new SpotifyWebAPI\Session(
-    '0ec8ef8e321a49429a39d4bc87ca2188',
-    'a030de15311a4109a06a2fbc92d89adc',
+    'a14f16defc434d5c9574d98fc2bde945',
+    'ea84844e954348779762db488e4a4da9',
     'https://spotify-stats-php.herokuapp.com/callback.php'
 );
 
