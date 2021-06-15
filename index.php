@@ -1,3 +1,4 @@
+<?php   require 'vendor/autoload.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +17,8 @@
 
 <body>
 <?php
-  require 'vendor/autoload.php';
 
-  session_start();
+  //session_start();
   if (!isset($_COOKIE['user'])) {
       header("Location: login.php");
   }
