@@ -22,7 +22,7 @@ $_SESSION['refreshToken'] = $refreshToken;
 try {
     $api = new SpotifyWebAPI\SpotifyWebAPI();
    
-    $api->setAccessToken($_COOKIE['accessToken']);
+    $api->setAccessToken($_SESSION['accessToken']);
 
     $_SESSION['user'] = $api->me()->display_name;
 
