@@ -30,7 +30,8 @@ try {
     die();
 }
 catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-    header('Location: https://spotify-stats-php.herokuapp.com/login.php');
+    //header('Location: https://spotify-stats-php.herokuapp.com/login.php');
+    echo $e;
 }
 
 ?>
