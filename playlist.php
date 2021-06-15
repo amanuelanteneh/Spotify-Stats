@@ -168,13 +168,14 @@ if (isset($_GET['playlistName']) && $_GET['playlistName'] != "") {
             $api->addPlaylistTracks($playlistId, $trackIds); 
 
         }
+        echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>Playlist created, please check Spotify account.</b></span>";   
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
             header("Location: logout.php");      
         }
 }  
-else if (isset($_POST['playlistName']) && $_POST['playlistName'] == "") {
-echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>Please Enter a Playlist Name.</b></span>";
+else if (isset($_GET['playlistName']) && $_GET['playlistName'] == "") {
+    echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>Please Enter a Playlist Name.</b></span>";
 }
 
 ?>

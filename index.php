@@ -69,7 +69,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link disabled" style="color: white;">Welcome, <?php echo "<br>" . $_SESSION['user'] ?>!</a>
+            <a class="nav-link disabled" style="color: white;">Welcome, <?php echo $_SESSION['user'] ?>!</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php">Home</a>
