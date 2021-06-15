@@ -31,6 +31,7 @@ body {
 
 .time-selector-active {
     border: #37FD56 2px solid;
+    color: #37FD56;
 }
 
 .bubble-pop {

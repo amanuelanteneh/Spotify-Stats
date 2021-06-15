@@ -16,7 +16,7 @@ html {
 body {
     height: 100%;
     margin: 0;
-    background-image: linear-gradient(to top left, rgb(196, 196, 196), #242424);
+    background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);
     color: black;
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
@@ -33,7 +33,7 @@ p {
     overflow: hidden;    
     font-family: 'Courier New', Courier, monospace;
     font-size: 6vmin;
-    color: #37FD56;
+    color: white;
     color: rgba(255,255,255,.70);
     text-align: left;
   }
