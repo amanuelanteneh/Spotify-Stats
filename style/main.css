@@ -37,6 +37,11 @@ body {
     margin-top: -14px;
 }
 
+.songName {
+    visibility: hidden;
+    color: #37FD56;
+}
+
 h1 {
     font-size: 4rem;
     color: #37FD56;
@@ -61,7 +66,9 @@ h3 {
         border: white;
         margin-top: 4rem;
     }
-
+  .d-flex > img:hover {
+    margin-top: -8px;
+}
 
 }
 
