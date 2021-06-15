@@ -23,21 +23,14 @@ body {
     border: solid white 1px;
     box-shadow: 0 2px 80px 0 rgba(0,0,0,3);
     padding: 0.5rem;
-    position: relative;
 }
 
 .time-selector {
     cursor: pointer;
-    position: relative;
 }
 
-#selectedBorder {
-    z-index: 10;
-    width: 33%;
-    left: 2%;
-    border: solid #37FD56 3px;
-    border-radius: 3px;
-    position: absolute;
+.time-selector-active {
+    border: #37FD56 2px solid;
 }
 
 .bubble-pop {
