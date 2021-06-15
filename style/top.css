@@ -26,7 +26,7 @@ body {
     position: relative;
 }
 
-.time-selector, .selectedBorder {
+.time-selector {
     cursor: pointer;
     position: relative;
 }
@@ -35,6 +35,7 @@ body {
     z-index: 10;
     width: 33%;
     border: #37FD56;
+    position: absolute;
 }
 
 .bubble-pop {
