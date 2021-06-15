@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to top left, rgb(196, 196, 196), #242424);
+    background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -32,7 +32,6 @@ body {
 .time-selector-active {
     border: #37FD56 2px solid;
     cursor: pointer;
-    color: #37FD56;
 }
 
 .bubble-pop {
