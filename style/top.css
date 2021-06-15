@@ -27,7 +27,7 @@ body {
 
 .time-selector, .selectedBorder {
     cursor: pointer;
-    position: absolute;
+    position: relative;
 }
 
 .selectedBorder {
