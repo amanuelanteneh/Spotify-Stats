@@ -16,18 +16,21 @@ $session->requestAccessToken($_GET['code']);
 $accessToken = $session->getAccessToken();
 $refreshToken = $session->getRefreshToken();
 
-$_SESSION['accessToken'] = $accessToken; //saving access and refresh tokens in session array
-$_SESSION['refreshToken'] = $refreshToken;
+//$_COOKIE['accessToken'] = $accessToken; //saving access and refresh tokens in session array
+//$_COOKIE['refreshToken'] = $refreshToken;
 
-$session->refreshAccessToken($refreshToken);
+setcookie("accessToken", $accessToken, time() + (86400 * 30));
+setcookie("refreshToken", $refreshToken, time() + (86400 * 30));
+
+//$session->refreshAccessToken($refreshToken);
 
 $api = new SpotifyWebAPI\SpotifyWebAPI();
 
-$api->setAccessToken($_SESSION['accessToken']);
-
-$_SESSION['user'] = "temp";//$api->me()->display_name; //set session username
+$api->setAccessToken($_COOKIE['accessToken']);
 
 
+setcookie("user", $api->me()->display_name, time() + (86400 * 10));
+//$_COOKIE['user'] = "temp";// //set session username
 
 
 // Send the user to main page 
