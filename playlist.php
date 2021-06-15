@@ -21,7 +21,7 @@
   require 'vendor/autoload.php';
   session_start();
   if (!isset($_SESSION['user'])) {
-      header("Location: https://spotify-stats-php.herokuapp.com/login.php");
+      header("Location: login.php");
   }
   else {
   $successMsg = "";
