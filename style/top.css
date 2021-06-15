@@ -34,7 +34,6 @@ body {
 #selectedBorder {
     z-index: 10;
     width: 33%;
-    height: 80%;
     left: 2%;
     border: solid #37FD56 3px;
     border-radius: 3px;
