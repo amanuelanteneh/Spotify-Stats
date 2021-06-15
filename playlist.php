@@ -22,6 +22,7 @@
   if (!isset($_SESSION['user'])) {
       header("Location: https://spotify-stats-php.herokuapp.com/login.php");
   }
+  else {
   $successMsg = "";
 ?>
     <header>
@@ -179,6 +180,9 @@ else if (isset($_GET['playlistName']) && $_GET['playlistName'] == "") {
 }
 
 ?>
+
+
+<?php } ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
