@@ -96,13 +96,13 @@ catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
 
     <div class="container">
         <div class="row justify-content-center" id="timeSelector"> 
-            <div id="weeks" class="text-center col-lg-3 mb-3 time-selector-active">
+            <div id="weeks" class="text-center col-lg-4 mb-3 time-selector-active">
                 4 Weeks Ago
             </div>
-            <div id="months" class="text-center col-lg-3 mb-3 time-selector">
+            <div id="months" class="text-center col-lg-4 mb-3 time-selector">
                 6 Months Ago
             </div>
-            <div id="years" class="text-center col-lg-3 mb-3 time-selector">
+            <div id="years" class="text-center col-lg-4 mb-3 time-selector">
                 2 Years Ago
             </div>
         </div>    
