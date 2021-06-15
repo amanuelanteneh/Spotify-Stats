@@ -34,6 +34,7 @@ body {
 .selectedBorder {
     z-index: 10;
     width: 33%;
+    height: 90%;
     border: #37FD56;
     position: absolute;
 }
