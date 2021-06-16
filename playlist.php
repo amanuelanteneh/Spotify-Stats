@@ -24,7 +24,6 @@
       header("Location: login.php");
   }
   else {
-
 ?>
     <header>
     <!--Navbar (bootstrap)-->
@@ -176,7 +175,7 @@
 }  
 else if (isset($_GET['playlistName']) && $_GET['playlistName'] == "") {
     echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>Please Enter a Playlist Name.</b></span>";
-
+}
 ?>
 
 <?php } ?>
