@@ -34,7 +34,6 @@ p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 6vmin;
     color: white;
-    color: rgba(255,255,255,.70);
     text-align: left;
   }
 

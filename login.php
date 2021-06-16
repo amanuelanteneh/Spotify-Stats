@@ -56,7 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container">
     <p>Please login to continue</p><br>
     <h2>What is Spotify Stats?</h2><br>
-    <span>Spotify stats is a website that allows you to view your top songs and artists from Spotify at any time of the year!</span><br><br>
+    <span>Spotify stats is a website that allows you to view your top songs and artists from Spotify at any time of the year!
+    You can also find artists similar to your top artists and create playlists based on your top music.
+    </span><br><br>
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
       <input type="submit" value="Sign in with Spotify" class="btn"/> <br/><br/> 
     </form>
