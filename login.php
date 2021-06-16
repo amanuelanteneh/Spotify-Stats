@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
 
   <meta charset="UTF-8">
-  <meta name="description" content="Spotify manipulation website">
+  <meta name="description" content="Spotify stats and more.">
   <meta name="author" content="Amanuel Anteneh">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->

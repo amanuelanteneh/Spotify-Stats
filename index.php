@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Spotify manipulation website">
+  <meta name="description" content="Spotify stats and more.">
   <meta name="author" content="Amanuel Anteneh">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
@@ -133,9 +133,7 @@
     </a>
 
   </div>
-<?php } 
-
-?>
+<?php } ?>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
