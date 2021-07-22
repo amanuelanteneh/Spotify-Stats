@@ -111,8 +111,8 @@
            <span class="songName" id="songName2"> <?php echo $song2 ?> </span>
         </div>
         <div class="carousel-caption">
-          <h1>Related Music</h1>
-          <h3>Find artists and songs similar to your favorites!</h3>
+          <h1>Related Artists</h1>
+          <h3>Find artists similar to your favorites!</h3>
         </div>
       </div>
       <div class="carousel-item">
@@ -135,7 +135,7 @@
            <span class="songName" id="songName4"> <?php echo $song4 ?> </span>
         </div>
         <div class="carousel-caption">
-          <h1>Get Recommendations</h1>
+          <h1>Related Songs</h1>
           <h3>Get song recommendations based on artists and songs!</h3>
         </div>
       </div>
