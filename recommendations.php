@@ -102,7 +102,8 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 
 	}
 	catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-		header("Location: logout.php");      
+		//header("Location: logout.php");      
+		echo $e;
 	}
 }
 
