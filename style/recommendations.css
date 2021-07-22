@@ -3,9 +3,8 @@ html {
 }
 
 * {
-   scrollbar-width: 18px;/*thin;*/
-   scrollbar-color:  #10be2a;;
-
+   -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */
 }
 
 body {
