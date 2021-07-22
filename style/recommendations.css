@@ -35,7 +35,7 @@ html {
     }
 .horizontalScroll {
 	    flex-direction: column;
-	    /*overflow: auto;*/
+	    overflow: auto;
 	    overflow-y: hidden;
 	    overflow-x: scroll;
     }
