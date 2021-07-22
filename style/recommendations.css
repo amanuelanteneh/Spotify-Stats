@@ -40,14 +40,14 @@ html {
 	    overflow-x: scroll;
     }
 .scrollImg {
-	   width: 20%;
-	   height: 20%;
+	   width: 10%;
+	   height: 10%;
 	   margin-left: 2%;
 	   margin-right: 2%;
 	   display: inline-block;
 	   border-radius: 10px;
-	   border: 5px solid #37FD56;
-	   box-shadow: 0 1px 10px 0 rgba(0,0,0,3);
+	   border: 2px solid white;
+	   box-shadow: 0 1px 7px 0 rgba(0,0,0,3);
     }    
 
 
