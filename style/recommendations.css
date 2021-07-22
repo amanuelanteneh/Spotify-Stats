@@ -37,6 +37,7 @@ html {
 	    flex-direction: column;
 	    overflow: auto;
 	    overflow-y: hidden;
+	    overflow-x: scroll;
     }
 .scrollImg {
 	   width: 30%;
