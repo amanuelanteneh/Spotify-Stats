@@ -39,6 +39,9 @@ html {
 	    position: relative;
 	    overflow-x: scroll;
     }
+::-webkit-scrollbar-thumb {
+	background: #10be2a;
+}
 .scrollImg {
 	   width: 10%;
 	   height: 10%;
@@ -49,41 +52,8 @@ html {
 	   border: 2px solid white;
 	   box-shadow: 0 1px 7px 0 rgba(0,0,0,3);
     }    
-
-
-    /* Loading css */
-    p {
-	border-right: solid 5px rgba(255,255,255,.75);
-	white-space: nowrap;
-	overflow: hidden;    
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 6vmin;
-	color: rgba(255,255,255,.70);
-	text-align: center;
-      }
-    
-    
-    /* Animation */
-    p {
-	animation: animated-text 3s linear 1s 1 normal both,
-		   animated-cursor 600ms linear infinite;
-      }
-    
-      /* text animation */
-      
-    @keyframes animated-text{
-	from{width: 0%;}
-	to{width: 100%;}
-      }
-      
-      /* cursor animations */
-      
-    @keyframes animated-cursor{
-	from{border-right-color: rgba(255,255,255,.75);}
-	to{border-right-color: transparent;}
-      }
-    
-    @media only screen and (max-width: 940px) {
+        
+@media only screen and (max-width: 940px) {
     
     
 	#inputContainer {
