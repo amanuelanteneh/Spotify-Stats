@@ -35,8 +35,10 @@ html {
     }
 .horizontalScroll {
 	    flex-direction: column;
+	    overflow: auto;
+	    overflow-y: hidden;
     }
-img {
+.scrollImg {
 	   width: 30%;
 	   height: 30%;
     }    
