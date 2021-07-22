@@ -34,14 +34,15 @@ html {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 .horizontalScroll {
-	    flex-direction: column;
-	    overflow: auto;
 	    overflow-y: hidden;
+	    white-space: nowrap;
+	    position: relative;
 	    overflow-x: scroll;
     }
 .scrollImg {
 	   width: 20%;
 	   height: 20%;
+	   display: inline-block;
     }    
 
 
