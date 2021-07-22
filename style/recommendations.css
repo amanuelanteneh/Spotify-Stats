@@ -4,7 +4,6 @@ html {
     
 body {
 	height: 100%;
-	scrollbar-color: #10be2a;
 	margin: 0;
 	background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);
 	color: white;
@@ -35,7 +34,7 @@ h1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .horizontalScroll {
+.horizontalScroll {
 	    overflow-y: hidden;
 	    white-space: nowrap;
 	    position: relative;
@@ -45,6 +44,10 @@ h1 {
 body::-webkit-scrollbar-thumb {
 	background: #10be2a;
 }
+body::-webkit-scrollbar {
+	color: #10be2a;
+}
+
 
 .scrollImg {
 	   width: 10%;
