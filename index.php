@@ -65,6 +65,9 @@
             <a class="nav-link" href="playlist.php">Playlist</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="recommendations.php">Recommendations</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="logout.php">Logout</a>
           </li>
         </ul>

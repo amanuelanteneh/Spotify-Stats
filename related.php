@@ -26,6 +26,16 @@
       header("Location: login.php");
   }
   else { 
+    function findRelatedArtist($artistID, $artistName, $artistImg ) {
+        setcookie('artistID', $artistID, time()+3600);
+        setcookie('artistName', $artistName, time()+3600);
+        setcookie('artistImg', $artistImg, time()+3600);
+        header("Location: related.php");
+    }
+       // to handle clicks on artist name
+    if (isset($_GET['artistID'])){
+        findRelatedArtist($_GET['artistID'], $_GET['artistName'], $_GET['artistImg']);
+    }
 
 ?>
 <?php
@@ -63,6 +73,9 @@
                         <a class="nav-link" href="playlist.php">Playlist</a>
                     </li>
                     <li class="nav-item">
+                    <a class="nav-link" href="recommendations.php">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li> 
                 </ul>
@@ -90,7 +103,7 @@
            $i = 0;
            foreach ($relatedArtists->artists as $artist) {
                 if ($i < 6) {
-                echo "<div class='text-center col-lg-2 mb-3'><div class='d-flex justify-content-center'><img src=" . $artist->images[0]->url . " alt=" . $artist->uri . " class='d-block related-artist'></div>" . $artist->name ."</div>";            
+                echo "<div class='text-center col-lg-2 mb-3'><div class='d-flex justify-content-center'><img src=" . $artist->images[0]->url . " alt=" . $artist->uri . " class='d-block related-artist'></div> <span class='artistName'><a href='top.php?artistID=" . $artist->id . "&artistName=" . $artist->name . "&artistImg=" .  $artist->images[0]->url . "'>" . $artist->name . "</a></span> </div>";            
                 $i++;
             }
            }

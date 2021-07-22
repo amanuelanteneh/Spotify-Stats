@@ -7,7 +7,6 @@ var weeks = document.getElementById("weeks");
 var months = document.getElementById("months");
 var years = document.getElementById("years");
 
-
 years.addEventListener("click", () => {
     years.classList.add('time-selector-active');
     years.classList.remove('time-selector');
