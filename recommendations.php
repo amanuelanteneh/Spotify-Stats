@@ -23,16 +23,6 @@
       header("Location: login.php");
   }
   else {
-  /*try {    
-    $api = new SpotifyWebAPI\SpotifyWebAPI();
-
-
-    $api->setAccessToken($_SESSION['accessToken']);
-  
-    }
-    catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-      header("Location: logout.php");      
-    } */
 ?>
 
   <header>
@@ -97,11 +87,17 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 		}
 		else {
 		        $results = $api->search($search, 'artist');
-		}
-		
+
+		echo '<div class="horizontalScroll">';		
 		foreach ($results->artists->items as $artist) {
-			echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>" . $artist->name . "<br></b></span>";
-		    }	
+			//echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>" . $artist->name . "<br></b></span>";
+			echo "<img src=" . $artist->images[0]->url . " class='d-block' alt='' id='song2'>";
+		}
+		echo '</div>';
+
+
+		}
+			
 
 	}
 	catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
