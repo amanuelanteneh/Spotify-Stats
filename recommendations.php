@@ -72,14 +72,36 @@
         <form id="inputForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="get">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Enter song or artist</label>
-                <input type="text" class="form-control" id="playlistNameInput" placeholder="Artist or Song" name="playlistName">
+                <input type="text" class="form-control" id="searchNameInput" placeholder="Artist or Song" name="searchName">
             </div>
             <div class="form-group"> <!-- Dropdown for interval option -->
                 <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Search</button>
             </div>
             <div><p><?php echo $successMsg ?></p></div>
+	    <div><p><?php echo $successMsg ?></p></div>
         </form>
   </div>
+<?php 
+if (isset($_GET['searchName']) && $_GET['searchName'] != "") { 
+	$search = $_GET['searchName'];
+	try {    
+		$api = new SpotifyWebAPI\SpotifyWebAPI();
+	
+		$api->setAccessToken($_SESSION['accessToken']);	
+	
+	
+	}
+	catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
+		header("Location: logout.php");      
+	}
+}
+
+else if (isset($_GET['searchName']) && $_GET['searchName'] == "") {
+	echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>Please Enter a Search Entry.</b></span>";
+}    
+
+?>
+
 
   <?php } ?>
    <!-- Optional JavaScript -->
