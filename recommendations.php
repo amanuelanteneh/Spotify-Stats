@@ -100,7 +100,7 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 		}
 		
 		foreach ($results->artists->items as $artist) {
-			echo $artist->name, '<br>';
+			echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>" . $artist->name . "<br></b></span>";
 		    }	
 
 	}
