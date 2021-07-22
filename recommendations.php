@@ -94,7 +94,12 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 		$api = new SpotifyWebAPI\SpotifyWebAPI();
 	
 		$api->setAccessToken($_SESSION['accessToken']);	
-		$results = $api->search($search, strtolower($type));
+		if ($type == "Songs"){
+			$results = $api->search($search, 'track');
+		}
+		else {
+		        $results = $api->search($search, 'artist');
+		}
 		echo $results;
 		/*foreach ($results->artists->items as $artist) {
 			echo $artist->name, '<br>';
