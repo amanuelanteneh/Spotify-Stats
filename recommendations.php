@@ -71,12 +71,11 @@
   <div class="container text-center d-flex justify-content-center" id="inputContainer">
         <form id="inputForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="get">
             <div class="form-group">
-                <label for="exampleFormControlInput1">Enter Name Of Song</label>
-                <input type="text" class="form-control" id="playlistNameInput" placeholder="Playlist Name" name="playlistName">
+                <label for="exampleFormControlInput1">Enter song or artist</label>
+                <input type="text" class="form-control" id="playlistNameInput" placeholder="artist/song" name="playlistName">
             </div>
             <div class="form-group"> <!-- Dropdown for interval option -->
-                <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Create
-                Playlist</button>
+                <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Search songs or artists</button>
             </div>
             <div><p><?php echo $successMsg ?></p></div>
         </form>
