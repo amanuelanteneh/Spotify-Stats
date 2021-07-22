@@ -82,8 +82,6 @@
             <div class="form-group"> <!-- Dropdown for interval option -->
                 <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Search</button>
             </div>
-            <div><p><?php echo $successMsg ?></p></div>
-	    <div><p><?php echo $successMsg ?></p></div>
         </form>
   </div>
 <?php 
@@ -100,15 +98,14 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 		else {
 		        $results = $api->search($search, 'artist');
 		}
-		echo $results;
-		/*foreach ($results->artists->items as $artist) {
+		
+		foreach ($results->artists->items as $artist) {
 			echo $artist->name, '<br>';
-		    }	*/
+		    }	
 
 	}
 	catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
-		//header("Location: logout.php");      
-		echo $e;
+		header("Location: logout.php");      
 	}
 }
 

@@ -74,7 +74,6 @@
                 <button type="submit" class="btn" id="createButton" style="background-color: #37FD56; color: black;">Create
                 Playlist</button>
             </div>
-            <div><p><?php echo $successMsg ?></p></div>
         </form>
     </div>
 
