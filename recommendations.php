@@ -20,10 +20,10 @@
 
   session_start();
   if (!isset($_SESSION['user'])) {
-      header("Location: https://spotify-stats-php.herokuapp.com/login.php");
+      header("Location: login.php");
   }
   else {
-  try {    
+  /*try {    
     $api = new SpotifyWebAPI\SpotifyWebAPI();
 
 
@@ -32,7 +32,7 @@
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
       header("Location: logout.php");      
-    } 
+    } */
 ?>
 
   <header>
