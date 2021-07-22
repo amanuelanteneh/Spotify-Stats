@@ -70,7 +70,12 @@
   </header>
   <div class="container text-center d-flex justify-content-center" id="inputContainer">
         <form id="inputForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="get">
-            <div class="form-group">
+	<label for="timeIntervalSelector">Search for:</label>
+	<select class="form-control" id="typeSelect" name="type">
+                    <option>Songs</option>
+                    <option>Artists</option>
+	</select>
+	    <div class="form-group">
                 <label for="exampleFormControlInput1">Enter song or artist</label>
                 <input type="text" class="form-control" id="searchNameInput" placeholder="Artist or Song" name="searchName">
             </div>
@@ -84,12 +89,17 @@
 <?php 
 if (isset($_GET['searchName']) && $_GET['searchName'] != "") { 
 	$search = $_GET['searchName'];
+	$type = $_GET['type'];
 	try {    
 		$api = new SpotifyWebAPI\SpotifyWebAPI();
 	
 		$api->setAccessToken($_SESSION['accessToken']);	
-	
-	
+		$results = $api->search($search, strtolower($type));
+		
+		foreach ($results->artists->items as $artist) {
+			echo $artist->name, '<br>';
+		    }	
+
 	}
 	catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
 		header("Location: logout.php");      
