@@ -95,10 +95,10 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 	
 		$api->setAccessToken($_SESSION['accessToken']);	
 		$results = $api->search($search, strtolower($type));
-		
-		foreach ($results->artists->items as $artist) {
+		echo $results;
+		/*foreach ($results->artists->items as $artist) {
 			echo $artist->name, '<br>';
-		    }	
+		    }	*/
 
 	}
 	catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
