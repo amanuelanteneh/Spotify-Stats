@@ -71,8 +71,8 @@ body::-webkit-scrollbar {
     
     
 	.scrollImg {
-	   width: 80%;
-	   height: 80%;
+	   width: 60%;
+	   height: 60%;
 	   margin-left: 2%;
 	   margin-right: 2%;
 	   display: inline-block;

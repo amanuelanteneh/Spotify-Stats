@@ -91,7 +91,7 @@ if (isset($_GET['searchName']) && $_GET['searchName'] != "") {
 		echo '<div class="horizontalScroll">';		
 		foreach ($results->artists->items as $artist) {
 			//echo "<span class='justify-content-center d-flex' style='color: #37FD56; font-family: 'Courier New', Courier, monospace;' id='message'><b>" . $artist->name . "<br></b></span>";
-			echo "<img src=" . $artist->images[0]->url . " class='scrollImg' alt=''>" . $artist->name;
+			echo "<img src=" . $artist->images[0]->url . " class='scrollImg' alt=''><span class='name'>" . $artist->name . "</a></span>";
 		}
 		echo '</div>';
 
