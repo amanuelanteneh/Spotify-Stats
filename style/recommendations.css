@@ -67,17 +67,18 @@ body::-webkit-scrollbar {
 	   box-shadow: 0 1px 7px 0 rgba(0,0,0,3);
     }    
         
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 768px) {
     
     
-	#inputContainer {
-	padding-top: 3rem;
-	width: 85%;
-	}
-    
-	@keyframes animated-text{
-	    from{width: 0%;}
-	    to{width: 100%;}
-	  }
+	.scrollImg {
+	   width: 60%;
+	   height: 60%;
+	   margin-left: 2%;
+	   margin-right: 2%;
+	   display: inline-block;
+	   border-radius: 10px;
+	   border: 2px solid white;
+	   box-shadow: 0 1px 7px 0 rgba(0,0,0,3);
+    }
     
     }
