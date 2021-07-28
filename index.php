@@ -36,8 +36,6 @@
     $song2 = $myRecentSongs->items[1]->track->name;
     $albumCover3 = $myRecentSongs->items[2]->track->album->images[0]->url;
     $song3 = $myRecentSongs->items[2]->track->name;
-    $albumCover4 = $myRecentSongs->items[3]->track->album->images[0]->url;
-    $song4 = $myRecentSongs->items[3]->track->name;
     }
     catch (SpotifyWebAPI\SpotifyWebAPIException $e) {
       header("Location: logout.php");      
@@ -65,9 +63,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="playlist.php">Playlist</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="recommendations.php">Recommendations</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logout.php">Logout</a>
@@ -125,18 +120,6 @@
         <div class="carousel-caption">
           <h1>Make a Playlist</h1>
           <h3>Create a playlist based off your top songs and artists!</h3>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <img src=<?php echo $albumCover4 ?> class="d-block" alt="" id="song4">
-        </div>
-        <div class="d-flex justify-content-center">
-           <span class="songName" id="songName4"> <?php echo $song4 ?> </span>
-        </div>
-        <div class="carousel-caption">
-          <h1>Related Songs</h1>
-          <h3>Get song recommendations based on artists and songs!</h3>
         </div>
       </div>
     </div>
