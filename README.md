@@ -13,7 +13,7 @@ Features include:
 ⋅ Ability to get recommendations for similar artists based on an aritst you chose from the time frames mentioned above.
 
 
-## Top artists and songs from 4 weeks ago
+## Top artists and songs 
 
 ![Image1](img/top4weeks.png)
 
