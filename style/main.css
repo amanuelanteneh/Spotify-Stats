@@ -3,9 +3,9 @@ html {
 }
 body {
     font-family: 'Courier New', Courier, monospace;
-    /*background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);*/
+    background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);
     color: white;
-    background-image: linear-gradient(to top left, rgb(196, 196, 196), green);
+   /* background-image: linear-gradient(to top left, rgb(196, 196, 196), green);*/
     height: 100%;
     padding-bottom: 20px;
 }
