@@ -20,10 +20,6 @@ song3.addEventListener("mouseenter", () => {
 	songName3.style.visibility = "visible";
 });
 
-song4.addEventListener("mouseenter", () => {
-	songName4.style.visibility = "visible";
-});
-
 song1.addEventListener("mouseleave", () => {
 	songName1.style.visibility = "hidden";
 });
@@ -36,6 +32,3 @@ song3.addEventListener("mouseleave", () => {
 	songName3.style.visibility = "hidden";
 });
 
-song4.addEventListener("mouseleave", () => {
-	songName4.style.visibility = "hidden";
-});
