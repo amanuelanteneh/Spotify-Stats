@@ -5,7 +5,6 @@ var song2 = document.getElementById("song2");
 var songName3 = document.getElementById("songName3");
 var song3 = document.getElementById("song3");
 var songName4 = document.getElementById("songName4");
-var song4 = document.getElementById("song4")
 
 
 song1.addEventListener("mouseenter", () => {
