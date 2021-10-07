@@ -6,6 +6,7 @@ body {
     background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);
     color: white;
     height: 100%;
+    padding-bottom: 20px;
 }
 .name {
     color: #37FD56;
@@ -16,7 +17,6 @@ body {
 .carousel-item {
     height: 39rem;
     color: white;
-    /*background-color: #12cf2e;*/
 }
 
 .carousel {
@@ -60,7 +60,6 @@ h3 {
 @media only screen and (max-width: 768px) {
     .carousel-item {
         height: 49rem;
-        /*background-color: #12cf2e;*/
     }  
     
   .d-flex > img {

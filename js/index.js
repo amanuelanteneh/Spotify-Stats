@@ -8,34 +8,34 @@ var songName4 = document.getElementById("songName4");
 var song4 = document.getElementById("song4")
 
 
-song1.addEventListener("mouseover", () => {
+song1.addEventListener("mouseenter", () => {
 	songName1.style.visibility = "visible";
 });
 
-song2.addEventListener("mouseover", () => {
+song2.addEventListener("mouseenter", () => {
 	songName2.style.visibility = "visible";
 });
 
-song3.addEventListener("mouseover", () => {
+song3.addEventListener("mouseenter", () => {
 	songName3.style.visibility = "visible";
 });
 
-song4.addEventListener("mouseover", () => {
+song4.addEventListener("mouseenter", () => {
 	songName4.style.visibility = "visible";
 });
 
-song1.addEventListener("mouseout", () => {
+song1.addEventListener("mouseleave", () => {
 	songName1.style.visibility = "hidden";
 });
 
-song2.addEventListener("mouseout", () => {
+song2.addEventListener("mouseleave", () => {
 	songName2.style.visibility = "hidden";
 });
 
-song3.addEventListener("mouseout", () => {
+song3.addEventListener("mouseleave", () => {
 	songName3.style.visibility = "hidden";
 });
 
-song4.addEventListener("mouseout", () => {
+song4.addEventListener("mouseleave", () => {
 	songName4.style.visibility = "hidden";
 });
