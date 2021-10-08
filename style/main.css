@@ -55,9 +55,18 @@ h3 {
 
 @media only screen and (max-width: 1350px) {
     .carousel-item {
-        height: 30.5rem;
+        height: 30rem;
     }  
- 
+    h1 {
+        font-size: 2.5rem;
+        color: #37FD56;
+    }
+
+    h3 {
+        color: white;
+    }
+
+} 
 
 @media only screen and (max-width: 768px) {
     .carousel-item {
