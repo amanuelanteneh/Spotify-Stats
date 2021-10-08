@@ -14,7 +14,7 @@ body {
 }
 
 .carousel-item {
-    height: 36rem;
+    height: 37rem;
     color: white;
 }
 
@@ -51,6 +51,13 @@ h1 {
 h3 {
     color: white;
 }
+
+
+@media only screen and (max-width: 1350px) {
+    .carousel-item {
+        height: 25rem;
+    }  
+ 
 
 @media only screen and (max-width: 768px) {
     .carousel-item {
