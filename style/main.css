@@ -14,10 +14,9 @@ body {
 }
 
 .carousel-item {
-    height: 39rem;
+    height: 29rem;
     color: white;
 }
-
 
 .d-flex > img {
    width: 25%;
