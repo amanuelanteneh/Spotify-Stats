@@ -39,8 +39,8 @@ body {
 .songName {
     visibility: hidden;
     color: white;
-    font-size: 4vmin;
-    padding-top: 4rem;
+    font-size: 3.5vmin;
+    padding-top: 3rem;
 }
 
 h1 {
