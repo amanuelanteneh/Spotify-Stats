@@ -14,8 +14,8 @@ body {
 }
 
 .carousel-item {
+    height: 30rem;
     color: white;
-    padding-top: 40rem;
 }
 
 .d-flex > img {
