@@ -118,7 +118,7 @@
         </div>
         <div class="carousel-caption">
           <h1>Make a Playlist</h1>
-          <h3>Create a playlist based off your top songs and artists!</h3>
+          <h3>Create a playlist from your top music!</h3>
         </div>
       </div>
     </div>
