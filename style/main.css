@@ -14,7 +14,7 @@ body {
 }
 
 .carousel-item {
-    height: 29rem;
+    height: 100%;
     color: white;
 }
 
